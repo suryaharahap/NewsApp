@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		D884B052263BFFD4004AB4C2 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884B051263BFFD4004AB4C2 /* NewsResponse.swift */; };
 		D884B057263C08CD004AB4C2 /* NewsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884B056263C08CD004AB4C2 /* NewsEndpoint.swift */; };
 		D884B05C263C18FF004AB4C2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884B05B263C18FF004AB4C2 /* APIError.swift */; };
+		D8B9B4C02670BC75000299CA /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = D8B9B4BF2670BC75000299CA /* URLImage */; };
+		D8B9B4C32670BCE2000299CA /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B9B4C22670BCE2000299CA /* ArticleView.swift */; };
 		D8CED5A126707E7400F66985 /* ResultsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CED5A026707E7400F66985 /* ResultsState.swift */; };
 		D8CED5A626707F3000F66985 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CED5A526707F3000F66985 /* NewsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +32,7 @@
 		D884B051263BFFD4004AB4C2 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 		D884B056263C08CD004AB4C2 /* NewsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndpoint.swift; sourceTree = "<group>"; };
 		D884B05B263C18FF004AB4C2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		D8B9B4C22670BCE2000299CA /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		D8CED5A026707E7400F66985 /* ResultsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsState.swift; sourceTree = "<group>"; };
 		D8CED5A526707F3000F66985 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B9B4C02670BC75000299CA /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D884B04B263BF515004AB4C2 /* HomeView.swift */,
+				D8B9B4C22670BCE2000299CA /* ArticleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +164,9 @@
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+				D8B9B4BF2670BC75000299CA /* URLImage */,
+			);
 			productName = NewsApp;
 			productReference = D884B034263BE466004AB4C2 /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +194,9 @@
 				Base,
 			);
 			mainGroup = D884B02B263BE466004AB4C2;
+			packageReferences = (
+				D8B9B4BE2670BC75000299CA /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = D884B035263BE466004AB4C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,6 +230,7 @@
 				D884B052263BFFD4004AB4C2 /* NewsResponse.swift in Sources */,
 				D884B05C263C18FF004AB4C2 /* APIError.swift in Sources */,
 				D884B057263C08CD004AB4C2 /* NewsEndpoint.swift in Sources */,
+				D8B9B4C32670BCE2000299CA /* ArticleView.swift in Sources */,
 				D8CED5A626707F3000F66985 /* NewsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8B9B4BE2670BC75000299CA /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8B9B4BF2670BC75000299CA /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8B9B4BE2670BC75000299CA /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D884B02C263BE466004AB4C2 /* Project object */;
 }
